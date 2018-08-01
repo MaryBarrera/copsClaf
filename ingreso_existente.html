@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ingreso</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery-1.11.0.js"></script>
+  <link rel="icon" href="filmoteca.png">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12" align="center">
+        <h4>Agrupar ingresos por procedencia.</h4>
+        <label class="radio-inline"><input type="radio" name="tipo" value="nuevo"  ><a href="ingreso_nuevo.html"> Nuevo Ingreso</a></label>
+        <label class="radio-inline"><input type="radio" name="tipo" value="default"> Ingreso default (COPS -CLAF) </label>
+        <label class="radio-inline"><input type="radio" name="tipo" value="existente" checked><a href="ingreso_existente.html">Ingreso existente</a></label>
+      </div>
+    </div> <!-- ./div row fila 1-->
+  </div> <!-- ./divcontainer 1-->
+
+  <br><br>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="input-group">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">Buscar</button>
+          </span>
+          <input type="text" class="form-control" placeholder="Donativo">
+        </div>
+      </div>
+    </div> <!-- ./div row fila 2-->
+
+    <br>
+    <div class="row">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Procedencia</th>
+            <th scope="col">Acción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>DONATIVO LIC. ALFONSO ROSAS PRIEGO</td>
+            <td><a href="resumen.html">Seleccionar</a></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>DONATIVO SR. SALVADOR BARBABOSA</td>
+            <td><a href="#">Seleccionar</a></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>DONATIVO EMBAJADA DE FRANCIA</td>
+            <td><a href="#">Seleccionar</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div> <!-- ./row-->
+
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12" align="right">
+          <a class="btn btn-danger btn-md" href="ingreso.html" role="button">Regresar</a>
+          <a class="btn btn-primary btn-md" href="resumen.html" role="button">Continuar</a>
+        </div>
+      </div> <!--./div row fila 3-->
+    </div> <!-- ./div container 3-->
+
+  </div> <!-- ./div container 2-->
+
+</body>
+</html>

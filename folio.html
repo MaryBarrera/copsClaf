@@ -8,17 +8,23 @@
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery-1.11.0.js"></script>
+  <script src="js/select.js"></script>
+  <link rel="icon" href="filmoteca.png">
+  <!-- versiones bootstrap y jquery para modal -->
+  <script src="bootstrap-3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
 </head>
+
 <body>
-
-    <div class="container">
+  <form form="f1">
+  <div class="container">
       <div class="row">
-
         <div class="col-md-12">
-          <h3>Folio {folio} 3455
-          <BR>Destino: {folio} Laboratorio Fotoquimico - CLAF
-          <BR>Lista de Títulos
-          <br><br><a href="#">Seleccionar Todos</a></h3>
+          <h3>Folio {3455}
+          <BR>Destino: {Laboratorio Fotoquimico - CLAF}
+          <br><br>Lista de Títulos
+          <br><br>
+          <input type="checkbox" onclick="select_all(document.forms[0])"/> Seleccionar Todos </h3>
 
           <table class="table">
             <thead class="thead-dark">
@@ -27,10 +33,10 @@
                 <th scope="col">#</th>
                 <th scope="col">Titulo</th>
                 <th scope="col">Caractersticas</th>
-                <th scope="col">Acción</th>
-                <th scope="col"> </th>
+                <th colspan="2">Acción</th>
               </tr>
-            </thead>
+            </thead> <!-- ./titulos tabla -->
+
             <tbody>
               <tr>
                 <th scope="row">
@@ -39,9 +45,9 @@
                 <th scope="row">1</th>
                 <td scope="row">FESTIVAL AEREO</td>
                 <td scope="row">35 NNOBN SS INT SPA</td>
-                <td rowspan="2">Baja</td>
-                <td rowspan="2">Actualizar info procedente de BUDA</td>
-              </tr>
+                <td scope="row"><p class="text-danger" data-toggle="modal" data-target="#bajaModal" id="btnModal">Baja <p></td>
+                <td scope="row"><a href="edicion.html">Actualizar info procedente de BUDA</a></td>
+              </tr> <!-- ./ fila 1-->
 
               <tr>
                 <th scope="row">
@@ -50,9 +56,9 @@
                 <th scope="row">2</th>
                 <td scope="row">NUBES </td>
                 <td scope="row">35 NNOBN SS SIN INT</td>
-                <td rowspan="2">Baja</td>
-                <td rowspan="2">Actualizar info procedente de BUDA</td>
-              </tr>
+                <td scope="row"><p class="text-danger" data-toggle="modal" data-target="#bajaModal" id="btnModal">Baja <p></td>
+                <td scope="row"><a href="edicion.html">Actualizar info procedente de BUDA</a></td>
+              </tr> <!-- ./div row fila 2-->
 
               <tr>
                 <th scope="row">
@@ -61,9 +67,9 @@
                 <th scope="row">3</th>
                 <td scope="row">GENERAL MAXIMINO AVILA CAMACHO INAGURA LA ESC. SEC. VENUSTIANO CARRANZA EN PUEBLA</td>
                 <td>35 NNOBN SS SIN INT</td>
-                <td rowspan="2">Baja</td>
-                <td rowspan="2">Actualizar info procedente de BUDA</td>
-              </tr>
+                <td scope="row"><p class="text-danger" data-toggle="modal" data-target="#bajaModal" id="btnModal">Baja <p></td>
+                <td scope="row"><a href="edicion.html">Actualizar info procedente de BUDA</a></td>
+              </tr> <!-- ./div row fila 3-->
 
               <tr>
                 <th scope="row">
@@ -72,9 +78,9 @@
                 <th scope="row">4</th>
                 <td scope="row">COLEGIO MILITAR</td>
                 <td scope="row">35 NNOBN SS </td>
-                <td rowspan="2">Baja</td>
-                <td rowspan="2">Actualizar info procedente de BUDA</td>
-              </tr>
+                <td scope="row"><p class="text-danger" data-toggle="modal" data-target="#bajaModal" id="btnModal">Baja <p></td>
+                <td scope="row"><a href="edicion.html">Actualizar info procedente de BUDA</a></td>
+              </tr> <!-- ./div row fila 4-->
 
               <tr>
                 <th scope="row">
@@ -83,22 +89,48 @@
                 <th scope="row">5</th>
                 <td scope="row">RANCHO LA JOYA</td>
                 <td scope="row">35 NNOBN SS </td>
-                <td rowspan="2">Baja</td>
-                <td rowspan="2">Actualizar info procedente de BUDA</td>
-              </tr>
+                <td scope="row"><p class="text-danger" data-toggle="modal" data-target="#bajaModal" id="btnModal">Baja <p></td>
+                <td scope="row"><a href="edicion.html">Actualizar info procedente de BUDA</a></td>
+              </tr> <!-- ./div row fila 5 -->
             </tbody>
           </table>
         </div>
       </div> <!--./ row 1-->
 
       <div class="row">
-        <div class="col-md-12">
-          <button type="button" class="btn btn-danger btn-lg">Large button</button>
-          <button type="button" class="btn btn-primary btn-lg">Large button</button>
+        <div class="col-md-12" align="right">
+          <a class="btn btn-danger btn-lg" href="seccion1.html" role="button">Cancelar</a>
+          <a class="btn btn-primary btn-lg" href="ingreso.html" role="button">Continuar con el ingreso</a>
         </div>
       </div> <!--./ row 2-->
-
     </div> <!--./ conteiner-->
+  </form>
+
+    <div class="conteiner">
+      <!-- Estructura Modal -->
+      <div class="modal fade" id="bajaModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="modalLabel">Confirmación de Baja</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <label>Titulo: RANCHO "LA JOYA", 35 NNOBN SS, Desconocido, MEX, 1940 </label><br>
+              <label for="comment">Motivo Baja</label>
+              <textarea class="form-control"></textarea>
+            </div>
+            <div class="modal-footer" align="right">
+              <button type="button" class="btn btn-danger btn-md" data-dismiss="modal">Cancelar</button>
+              <a class="btn btn-primary btn-md" href="folio.html" role="button">Confirmar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
 </body>
 </html>

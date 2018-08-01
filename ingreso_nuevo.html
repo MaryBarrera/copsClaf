@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ingreso</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery-1.11.0.js"></script>
+  <link rel="icon" href="filmoteca.png">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12" align="center">
+        <h4>Agrupar ingresos por procedencia.</h4>
+        <label class="radio-inline"><input type="radio" name="tipo" value="nuevo" checked ><a href="ingreso_nuevo.html"> Nuevo Ingreso</a></label>
+        <label class="radio-inline"><input type="radio" name="tipo" value="default"> Ingreso default (COPS -CLAF) </label>
+        <label class="radio-inline"><input type="radio" name="tipo" value="existente"><a href="ingreso_existente.html">Ingreso existente</a></label>
+      </div>
+    </div> <!-- ./div row fila 1-->
+  </div> <!-- ./divcontainer 1-->
+
+  <br><br>
+  <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="field">
+              <label> Procedencia</label>
+              <div class="control">
+                <input class="form-control" type="text">
+              </div>
+          </div>
+
+          <br>
+          <div class="field">
+              <label> Contacto</label>
+              <div class="control">
+                <input class="form-control" type="text">
+              </div>
+          </div>
+
+          <br>
+          <div class="field">
+              <label> Naturaleza del ingreso</label>
+              <div class="control">
+                <input class="form-control" type="text">
+              </div>
+          </div>
+        </div> <!-- ./div col 1-->
+
+        <div class="col-md-6">
+          <div class="field">
+              <label> Depositante</label>
+              <div class="control">
+                <input class="form-control" type="text">
+              </div>
+          </div>
+
+          <br>
+          <div class="field">
+              <label> Teléfono</label>
+              <div class="control">
+                <input class="form-control" type="text">
+              </div>
+          </div>
+
+          <br>
+          <div class="field">
+              <label type="email"> Correo</label>
+              <div class="control">
+                <input class="form-control" type="email" placeholder="nombre@ejemplo.com">
+              </div>
+          </div>
+        </div>
+    </div> <!-- ./div row fila 2-->
+
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12" align="right">
+          <a class="btn btn-danger btn-md" href="ingreso.html" role="button">Regresar</a>
+          <a class="btn btn-primary btn-md" href="resumen.html" role="button">Continuar</a>
+        </div>
+      </div> <!--./div row fila 3-->
+    </div> <!-- ./div container 3-->
+
+  </div> <!-- ./divcontainer 2-->
+
+
+
+</body>
+</html>
