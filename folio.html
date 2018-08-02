@@ -13,15 +13,16 @@
   <!-- versiones bootstrap y jquery para modal -->
   <script src="bootstrap-3.3.7/js/bootstrap.min.js"></script>
   <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>  
 </head>
 
 <body>
   <form form="f1">
   <div class="container">
       <div class="row">
-        <div class="col-md-12">
-          <h3>Folio {3455}
-          <BR>Destino: {Laboratorio Fotoquimico - CLAF}
+        <div id="main" class="col-md-12">
+          <h3>Folio {{folio}}
+          <BR>Destino: {{destino}}
           <br><br>Lista de Títulos
           <br><br>
           <input type="checkbox" onclick="select_all(document.forms[0])"/> Seleccionar Todos </h3>
@@ -117,8 +118,8 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body">
-              <label>Titulo: RANCHO "LA JOYA", 35 NNOBN SS, Desconocido, MEX, 1940 </label><br>
+            <div id="modal" class="modal-body">
+              <label>Titulo: {{titulo}}, {{caracteristicas}} </label><br>
               <label for="comment">Motivo Baja</label>
               <textarea class="form-control"></textarea>
             </div>
@@ -130,7 +131,7 @@
         </div>
       </div>
     </div>
-
-
+  <!-- Ejecuta script de vue js -->  
+  <script src="js/vue.js"></script>
 </body>
 </html>

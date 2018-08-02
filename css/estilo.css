@@ -1,0 +1,22 @@
+/*
+a:active { 
+	color: red; 
+	text-decoration: none 
+}
+a:visited { 
+	color: white; 
+	text-decoration: none 
+}
+a:hover { 
+	color: green; 
+	text-decoration: underline 
+}*/
+
+table : hover{
+
+	color: green; 
+	text-decoration: underline 
+	onMouseover="this.style.color='blue'" 
+	onMouseout="this.style.color='red'"
+}
+

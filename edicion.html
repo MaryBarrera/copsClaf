@@ -5,12 +5,13 @@
 	<title>Edicion</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/jquery-1.11.0.js"></script>	
+  	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>  
 	<link rel="icon" href="filmoteca.png">
 </head>
 
 <body>
-	<div class="container">
+	<div id="edicion" class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<h3>Edición de Titulo</h3>
@@ -20,7 +21,7 @@
 
 			<div class="col-md-3">
 				<div class="field">
-			  		<label> Titulo: {Colegio Militar}</label>
+			  		<label> Titulo: {{titulo}} </label>
 			  		<div class="control">
 			    		<input class="form-control" type="text" placeholder="Colegio Militar">
 			  		</div>
@@ -29,7 +30,7 @@
 
 			<div class="col-md-3">
 				<div class="field">
-			  		<label> Realizador: {Desconocido}</label>
+			  		<label> Realizador: {{realizador}}</label>
 			  		<div class="control">
 			    		<input class="form-control" type="text" placeholder="Desconocido">
 			  		</div>
@@ -38,7 +39,7 @@
 
 			<div class="col-md-3">
 				<div class="field">
-			  		<label> Año: {1932}</label>
+			  		<label> Año: {{anio}}</label>
 			  		<div class="control">
 			    		<input class="form-control" type="text" placeholder="1932">
 			  		</div>
@@ -47,7 +48,7 @@
 
 			<div class="col-md-3">
 				<div class="field">
-			  		<label> País: {MEX}</label>
+			  		<label> País: {{pais}}</label>
 			  		<div class="control">
 			    		<input class="form-control" type="text" placeholder="MEX">
 			  		</div>
@@ -57,11 +58,11 @@
 	</div>  <!-- ./div container 1-->
 
 	<br>
-	<div class="container">
+	<div id="edicion2" class="container">
 		<div class="row">
 			<div class="col-md-3">
 				<div class="field">
-			  		<label> Formato: {35}</label>
+			  		<label> Formato: {{formato}}</label>
 			  		<div class="control">
 							<select class="form-control">
 							  <option value="1">8 mm</option>
@@ -74,7 +75,7 @@
 
 			<div class="col-md-3">
 				<div class="field">
-						<label> Soporte: {N}</label>
+						<label> Soporte: {{soporte}}</label>
 						<div class="control">
 							<select class="form-control">
 								<option value="1">Nitrato</option>
@@ -87,7 +88,7 @@
 
 			<div class="col-md-3">
 				<div class="field">
-						<label> Emulsión: {No}</label>
+						<label> Emulsión: {{emulsion}}</label>
 						<div class="control">
 							<select class="form-control">
 								<option value="1">Negativo Original</option>
@@ -101,7 +102,7 @@
 
 			<div class="col-md-3">
 				<div class="field">
-						<label> Color: {BN}</label>
+						<label> Color: {{color}}</label>
 						<div class="control">
 							<select class="form-control">
 								<option value="1">Blanco y Negro</option>
@@ -116,11 +117,11 @@
 	</div> <!-- ./div container 2-->
 
 	<br>
-	<div class="container">
+	<div id="edicion3" class="container">
 		<div class="row">
 			<div class="col-md-4">
 				<div class="field">
-			  		<label> No. de Rollos: {9 COMP}</label>
+			  		<label> No. de Rollos: {{rollos}}</label>
 			  		<div class="control">
 			    		<input class="form-control" type="text">
 			  		</div>
@@ -129,7 +130,7 @@
 
 			<div class="col-md-4">
 				<div class="field">
-						<label> Audio: {D-ITA SUBT SPA}</label>
+						<label> Audio: {{audio}}</label>
 						<div class="control">
 							<input class="form-control" type="text">
 						</div>
@@ -146,7 +147,9 @@
 			</div>
 		</div> <!--./div row fila 4-->
 	</div> <!-- ./div container 4-->
-
+	
+  	<!-- Ejecuta script de vue js -->  
+  	<script src="js/vue.js"></script>
 
 
 </body>

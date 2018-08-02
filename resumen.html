@@ -8,16 +8,17 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery-1.11.0.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script> 
   <link rel="icon" href="filmoteca.png">
 </head>
 
 <body>
-  <div class="container">
+  <div id="resumen" class="container">
     <div class="row">
       <label for=""><b><h3>Resumen del Ingreso</h3></b></label> <br>
-      <label for=""><b>Procedencia: </b>{DONATIVO SR. SALVADOR BARBABOSA}</label> <br>
-      <label for=""><b>Contacto: </b>{Subdirección de Acervo}</label> <br>
-      <label for=""><b>Naturaleza del Ingreso: </b>{DONATIVO}</label> <br><br>
+      <label for=""><b>Procedencia: </b>{{procedencia}}</label> <br>
+      <label for=""><b>Contacto: </b>{{contacto}}</label> <br>
+      <label for=""><b>Naturaleza del Ingreso: </b>{{nat_ingreso}}</label> <br><br>
       <label for=""><h4>Lista de Titulos</h4></label>
     </div>
 
@@ -51,11 +52,36 @@
     <div class="row">
       <div class="col-md-12" align="right">
         <a class="btn btn-danger btn-md" href="ingreso.html" role="button">Regresar</a>
-        <a class="btn btn-primary btn-md" href="resumen.html" role="button">Generar ingreso parcial</a>
+        <a class="btn btn-primary btn-md" role="button" data-toggle="modal" data-target="#bajaModal" id="btnModal">Generar ingreso parcial </a> <!-- href="resumen.html" -->
       </div>
     </div> <!--./div row fila 2-->
   </div> <!-- ./div container 2-->
 
+
+  <div class="conteiner">
+      <!-- Estructura Modal -->
+      <div class="modal fade" id="bajaModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="modalLabel">Ingreso Parcial</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div id="modal" class="modal-body">
+              <label>Ingreso Generado </label><br>
+            </div>
+            <div class="modal-footer" align="right">
+              <button type="button" class="btn btn-danger btn-md" data-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- Ejecuta script de vue js -->  
+  <script src="js/vue.js"></script>
 
 </body>
 </html>

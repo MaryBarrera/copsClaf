@@ -17,10 +17,32 @@
       <div class="col-md-12" align="center">
         <h4>Agrupar ingresos por procedencia.</h4>
         <label class="radio-inline"><input type="radio" name="tipo" value="nuevo" checked ><a href="ingreso_nuevo.html"> Nuevo Ingreso</a></label>
-        <label class="radio-inline"><input type="radio" name="tipo" value="default"> Ingreso default (COPS -CLAF) </label>
+        <label class="radio-inline" data-toggle="modal" data-target="#bajaModal" id="btnModal"><input type="radio" name="tipo" value="default" > Ingreso default (COPS -CLAF) </label>
         <label class="radio-inline"><input type="radio" name="tipo" value="existente"><a href="ingreso_existente.html">Ingreso existente</a></label>
       </div>
     </div> <!-- ./div row fila 1-->
   </div> <!-- ./divcontainer 1-->
+
+  <div class="conteiner">
+      <!-- Estructura Modal -->
+      <div class="modal fade" id="bajaModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="modalLabel">Ingreso Default</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div id="modal" class="modal-body">
+              <label>Migración de COPS a CLAF</label><br>
+            </div>
+            <div class="modal-footer" align="right">
+              <button type="button" class="btn btn-danger btn-md" data-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </body>
 </html>
