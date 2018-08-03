@@ -13,7 +13,7 @@
   <!-- versiones bootstrap y jquery para modal -->
   <script src="bootstrap-3.3.7/js/bootstrap.min.js"></script>
   <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>  
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 </head>
 
 <body>
@@ -27,7 +27,7 @@
           <br><br>
           <input type="checkbox" onclick="select_all(document.forms[0])"/> Seleccionar Todos </h3>
 
-          <table class="table">
+          <table class="table table-hover">
             <thead class="thead-dark">
               <tr>
                 <th scope="col"></th>
@@ -47,7 +47,7 @@
                 <td scope="row">FESTIVAL AEREO</td>
                 <td scope="row">35 NNOBN SS INT SPA</td>
                 <td scope="row"><p class="text-danger" data-toggle="modal" data-target="#bajaModal" id="btnModal">Baja <p></td>
-                <td scope="row"><a href="edicion.html">Actualizar info procedente de BUDA</a></td>
+                <td scope="row"><a href="edicion.html#1" id="1">Actualizar info procedente de BUDA</a></td>
               </tr> <!-- ./ fila 1-->
 
               <tr>
@@ -58,7 +58,7 @@
                 <td scope="row">NUBES </td>
                 <td scope="row">35 NNOBN SS SIN INT</td>
                 <td scope="row"><p class="text-danger" data-toggle="modal" data-target="#bajaModal" id="btnModal">Baja <p></td>
-                <td scope="row"><a href="edicion.html">Actualizar info procedente de BUDA</a></td>
+                <td scope="row"><a href="edicion.html#2" id="2">Actualizar info procedente de BUDA</a></td>
               </tr> <!-- ./div row fila 2-->
 
               <tr>
@@ -69,7 +69,7 @@
                 <td scope="row">GENERAL MAXIMINO AVILA CAMACHO INAGURA LA ESC. SEC. VENUSTIANO CARRANZA EN PUEBLA</td>
                 <td>35 NNOBN SS SIN INT</td>
                 <td scope="row"><p class="text-danger" data-toggle="modal" data-target="#bajaModal" id="btnModal">Baja <p></td>
-                <td scope="row"><a href="edicion.html">Actualizar info procedente de BUDA</a></td>
+                <td scope="row"><a href="edicion.html#3" id="3">Actualizar info procedente de BUDA</a></td>
               </tr> <!-- ./div row fila 3-->
 
               <tr>
@@ -80,7 +80,7 @@
                 <td scope="row">COLEGIO MILITAR</td>
                 <td scope="row">35 NNOBN SS </td>
                 <td scope="row"><p class="text-danger" data-toggle="modal" data-target="#bajaModal" id="btnModal">Baja <p></td>
-                <td scope="row"><a href="edicion.html">Actualizar info procedente de BUDA</a></td>
+                <td scope="row"><a href="edicion.html#4" id="4">Actualizar info procedente de BUDA</a></td>
               </tr> <!-- ./div row fila 4-->
 
               <tr>
@@ -91,7 +91,7 @@
                 <td scope="row">RANCHO LA JOYA</td>
                 <td scope="row">35 NNOBN SS </td>
                 <td scope="row"><p class="text-danger" data-toggle="modal" data-target="#bajaModal" id="btnModal">Baja <p></td>
-                <td scope="row"><a href="edicion.html">Actualizar info procedente de BUDA</a></td>
+                <td scope="row"><a href="edicion.html#5" id="5">Actualizar info procedente de BUDA</a></td>
               </tr> <!-- ./div row fila 5 -->
             </tbody>
           </table>
@@ -113,7 +113,7 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title" id="modalLabel">Confirmación de Baja</h4>
+              <h4 class="modal-title" id="modalLabel"><b>Confirmación de Baja</b></h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -125,13 +125,14 @@
             </div>
             <div class="modal-footer" align="right">
               <button type="button" class="btn btn-danger btn-md" data-dismiss="modal">Cancelar</button>
-              <a class="btn btn-primary btn-md" href="folio.html" role="button">Confirmar</a>
+              <a class="btn btn-primary btn-md" href="folio.html" id="btn-confirmar" role="button">Confirmar</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-  <!-- Ejecuta script de vue js -->  
+  <!-- Ejecuta script de vue js -->
   <script src="js/vue.js"></script>
+  <script src="js/accionEdicion.js"></script>
 </body>
 </html>

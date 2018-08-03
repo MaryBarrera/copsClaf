@@ -5,8 +5,8 @@
 	<title>Edicion</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery-1.11.0.js"></script>	
-  	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>  
+	<script src="js/jquery-1.11.0.js"></script>
+  	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 	<link rel="icon" href="filmoteca.png">
 </head>
 
@@ -15,13 +15,13 @@
 		<div class="row">
 			<div class="col-md-12">
 				<h3>Edición de Titulo</h3>
-				<p>Los campos que se tienen en BUDA pueden no coincidir con los campos en CLAF, revisa a un costado
-				de cada campo el valor en BUDA y completalo en CLAF si no se copio en automático.</p>
+				<p><h4>Los campos que se tienen en BUDA pueden no coincidir con los campos en CLAF, revisa a un costado
+				de cada campo el valor en BUDA y completalo en CLAF si no se copio en automático.</h4></p><br>
 			</div>
 
 			<div class="col-md-3">
 				<div class="field">
-			  		<label> Titulo: {{titulo}} </label>
+			  		<label>Titulo: <font size="3" color="red"> {{titulo}} </font></label>
 			  		<div class="control">
 			    		<input class="form-control" type="text" placeholder="Colegio Militar">
 			  		</div>
@@ -30,7 +30,7 @@
 
 			<div class="col-md-3">
 				<div class="field">
-			  		<label> Realizador: {{realizador}}</label>
+			  		<label> Realizador: <font size="3" color="red">{{realizador}}  </font></label>
 			  		<div class="control">
 			    		<input class="form-control" type="text" placeholder="Desconocido">
 			  		</div>
@@ -39,7 +39,7 @@
 
 			<div class="col-md-3">
 				<div class="field">
-			  		<label> Año: {{anio}}</label>
+			  		<label> Año: <font size="3" color="red">{{anio}}  </font></label>
 			  		<div class="control">
 			    		<input class="form-control" type="text" placeholder="1932">
 			  		</div>
@@ -48,7 +48,7 @@
 
 			<div class="col-md-3">
 				<div class="field">
-			  		<label> País: {{pais}}</label>
+			  		<label> País:<font size="3" color="red"> {{pais}}  </font></label>
 			  		<div class="control">
 			    		<input class="form-control" type="text" placeholder="MEX">
 			  		</div>
@@ -62,7 +62,7 @@
 		<div class="row">
 			<div class="col-md-3">
 				<div class="field">
-			  		<label> Formato: {{formato}}</label>
+			  		<label> Formato: <font size="3" color="red">{{formato}}  </font></label>
 			  		<div class="control">
 							<select class="form-control">
 							  <option value="1">8 mm</option>
@@ -75,7 +75,7 @@
 
 			<div class="col-md-3">
 				<div class="field">
-						<label> Soporte: {{soporte}}</label>
+						<label> Soporte: <font size="3" color="red">{{soporte}}  </font></label>
 						<div class="control">
 							<select class="form-control">
 								<option value="1">Nitrato</option>
@@ -88,7 +88,7 @@
 
 			<div class="col-md-3">
 				<div class="field">
-						<label> Emulsión: {{emulsion}}</label>
+						<label> Emulsión: <font size="3" color="red">{{emulsion}}  </font></label>
 						<div class="control">
 							<select class="form-control">
 								<option value="1">Negativo Original</option>
@@ -102,7 +102,7 @@
 
 			<div class="col-md-3">
 				<div class="field">
-						<label> Color: {{color}}</label>
+						<label> Color: <font size="3" color="red">{{color}}  </font></label>
 						<div class="control">
 							<select class="form-control">
 								<option value="1">Blanco y Negro</option>
@@ -121,7 +121,7 @@
 		<div class="row">
 			<div class="col-md-4">
 				<div class="field">
-			  		<label> No. de Rollos: {{rollos}}</label>
+			  		<label> No. de Rollos:<font size="3" color="red"> {{rollos}}  </font></label>
 			  		<div class="control">
 			    		<input class="form-control" type="text">
 			  		</div>
@@ -130,7 +130,7 @@
 
 			<div class="col-md-4">
 				<div class="field">
-						<label> Audio: {{audio}}</label>
+						<label> Audio: <font size="3" color="red"> {{audio}}  </font></label>
 						<div class="control">
 							<input class="form-control" type="text">
 						</div>
@@ -143,14 +143,14 @@
 		<div class="row">
 			<div class="col-md-12" align="right">
 				<a class="btn btn-danger btn-lg" href="folio.html" role="button">Cancelar</a>
-				<a class="btn btn-primary btn-lg" href="folio.html" role="button">Guardar Cambios</a>
+				<a class="btn btn-primary btn-lg" href="#l" id="btn-guardar" role="button">Guardar Cambios</a>
 			</div>
 		</div> <!--./div row fila 4-->
 	</div> <!-- ./div container 4-->
-	
-  	<!-- Ejecuta script de vue js -->  
-  	<script src="js/vue.js"></script>
 
+  	<!-- Ejecuta script de vue js -->
+  	<script src="js/vue.js"></script>
+	  <script src="js/accionEdicion.js"></script>
 
 </body>
 </html>
